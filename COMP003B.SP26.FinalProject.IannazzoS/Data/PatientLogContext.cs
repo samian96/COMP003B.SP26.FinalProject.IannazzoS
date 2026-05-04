@@ -1,5 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
-using COMP003B.SP26.FinalProject.IannazzoS.Models;
+﻿using COMP003B.SP26.FinalProject.IannazzoS.Models;
+using Microsoft.EntityFrameworkCore;
+
 namespace COMP003B.SP26.FinalProject.IannazzoS.Data
 {
     public class PatientLogContext : DbContext
