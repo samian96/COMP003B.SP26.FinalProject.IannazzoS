@@ -1,3 +1,6 @@
+using COMP003B.SP26.FinalProject.IannazzoS.Data;
+using Microsoft.EntityFrameworkCore;
+
 namespace COMP003B.SP26.FinalProject.IannazzoS
 {
     public class Program
@@ -8,6 +11,10 @@ namespace COMP003B.SP26.FinalProject.IannazzoS
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+            // database context setup
+            builder.Services.AddDbContext<PatientLogContext>(options =>
+              options.UseSqlServer("Name=ConnectionStrings:DefaultConnection"));
 
             var app = builder.Build();
 
