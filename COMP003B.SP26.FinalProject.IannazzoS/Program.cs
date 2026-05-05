@@ -9,16 +9,16 @@ namespace COMP003B.SP26.FinalProject.IannazzoS
         {
             var builder = WebApplication.CreateBuilder(args);
 
+            builder.Services.AddControllers();
+            builder.Services.AddEndpointsApiExplorer();
+            builder.Services.AddSwaggerGen();
+
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
             // database context setup
             builder.Services.AddDbContext<PatientLogContext>(options =>
               options.UseSqlServer("Name=ConnectionStrings:DefaultConnection"));
-            // test for swagger ui
-            builder.Services.AddControllers();
-            builder.Services.AddEndpointsApiExplorer();
-            builder.Services.AddSwaggerGen();
 
             var app = builder.Build();
 
@@ -27,6 +27,7 @@ namespace COMP003B.SP26.FinalProject.IannazzoS
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
+
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
             {
