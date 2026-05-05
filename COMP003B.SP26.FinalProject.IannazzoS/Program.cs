@@ -15,9 +15,18 @@ namespace COMP003B.SP26.FinalProject.IannazzoS
             // database context setup
             builder.Services.AddDbContext<PatientLogContext>(options =>
               options.UseSqlServer("Name=ConnectionStrings:DefaultConnection"));
+            // test for swagger ui
+            builder.Services.AddControllers();
+            builder.Services.AddEndpointsApiExplorer();
+            builder.Services.AddSwaggerGen();
 
             var app = builder.Build();
 
+            if (app.Environment.IsDevelopment())
+            {
+                app.UseSwagger();
+                app.UseSwaggerUI();
+            }
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
             {
