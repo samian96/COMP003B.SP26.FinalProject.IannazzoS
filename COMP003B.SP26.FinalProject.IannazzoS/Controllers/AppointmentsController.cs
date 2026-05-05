@@ -10,6 +10,8 @@ using COMP003B.SP26.FinalProject.IannazzoS.Models;
 
 namespace COMP003B.SP26.FinalProject.IannazzoS.Controllers
 {
+    [ApiController]
+    [Route("api/[controller]")]
     public class AppointmentsController : Controller
     {
         private readonly PatientLogContext _context;
