@@ -39,6 +39,12 @@ namespace COMP003B.SP26.FinalProject.IannazzoS.Controllers
             {
                 return NotFound();
             }
+            // get patients symptoms
+            ViewBag.Symptoms = from p in _context.Patients
+                               join a in _context.Appointments on p.PatientId equals p.PatientId
+                               join s in _context.Symptoms on s.SymptomId equals s.SymptomId
+                               where p.PatientId == id
+                               select s;
 
             return View(patient);
         }
