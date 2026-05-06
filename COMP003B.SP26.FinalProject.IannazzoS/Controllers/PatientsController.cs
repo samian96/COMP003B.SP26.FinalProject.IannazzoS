@@ -39,7 +39,7 @@ namespace COMP003B.SP26.FinalProject.IannazzoS.Controllers
             {
                 return NotFound();
             }
-            // gets details from the model
+            // grabs from patient model
             ViewBag.Symptoms = from p in _context.Patients
                                join a in _context.Appointments on p.PatientId equals a.PatientId
                                join s in _context.Symptoms on a.SymptomId equals s.SymptomId
