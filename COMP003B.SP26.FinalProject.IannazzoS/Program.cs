@@ -1,6 +1,9 @@
 using COMP003B.SP26.FinalProject.IannazzoS.Data;
 using Microsoft.EntityFrameworkCore;
-
+// Author: Samuel Iannazzo
+// Course: COMP-003B: ASP.NET Core
+// Instructor: Johnathan Cruz
+// Purpose: Final project synthesizing MVC, Web API, EF Core, and Middleware
 namespace COMP003B.SP26.FinalProject.IannazzoS
 {
     public class Program
