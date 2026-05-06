@@ -4,6 +4,7 @@ using COMP003B.SP26.FinalProject.IannazzoS.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace COMP003B.SP26.FinalProject.IannazzoS.Migrations
 {
     [DbContext(typeof(PatientLogContext))]
-    partial class PatientLogContextModelSnapshot : ModelSnapshot
+    [Migration("20260506042424_deletedDateFromAppointment")]
+    partial class deletedDateFromAppointment
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
