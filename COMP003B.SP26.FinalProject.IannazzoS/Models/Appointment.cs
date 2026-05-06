@@ -7,6 +7,8 @@ namespace COMP003B.SP26.FinalProject.IannazzoS.Models
         public int PatientId { get; set; }
         public int SymptomId { get; set; }
 
+        public string AppointmentDate { get; set; }
+
         // nullable nav properties
         public virtual Patient? Patient { get; set; }
         public virtual Symptom? Symptom { get; set; }
