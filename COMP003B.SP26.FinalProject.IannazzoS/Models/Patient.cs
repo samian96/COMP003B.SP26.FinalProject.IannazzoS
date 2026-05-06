@@ -22,6 +22,9 @@ namespace COMP003B.SP26.FinalProject.IannazzoS.Models
         [DataType(DataType.Date)]
         public DateTime AppointmentDate { get; set; }
 
+        [StringLength(20, MinimumLength = 5)]
+        public string Referral { get; set; }
+
         // collection navigation
         public virtual ICollection<Appointment>? Appointments { get; set; }
     }

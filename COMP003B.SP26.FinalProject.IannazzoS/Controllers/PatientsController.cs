@@ -39,7 +39,7 @@ namespace COMP003B.SP26.FinalProject.IannazzoS.Controllers
             {
                 return NotFound();
             }
-            // get patients symptoms
+
             ViewBag.Symptoms = from p in _context.Patients
                                join a in _context.Appointments on p.PatientId equals a.PatientId
                                join s in _context.Symptoms on a.SymptomId equals s.SymptomId
@@ -60,7 +60,7 @@ namespace COMP003B.SP26.FinalProject.IannazzoS.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("PatientId,Name,Email")] Patient patient)
+        public async Task<IActionResult> Create([Bind("PatientId,Name,Age,Email,AppointmentDate,Referral")] Patient patient)
         {
             if (ModelState.IsValid)
             {
@@ -92,7 +92,7 @@ namespace COMP003B.SP26.FinalProject.IannazzoS.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("PatientId,Name,Email")] Patient patient)
+        public async Task<IActionResult> Edit(int id, [Bind("PatientId,Name,Age,Email,AppointmentDate,Referral")] Patient patient)
         {
             if (id != patient.PatientId)
             {
