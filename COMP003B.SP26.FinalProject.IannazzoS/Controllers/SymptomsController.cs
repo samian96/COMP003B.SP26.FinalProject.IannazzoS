@@ -43,7 +43,7 @@ namespace COMP003B.SP26.FinalProject.IannazzoS.Controllers
                                join a in _context.Appointments on p.PatientId equals a.PatientId
                                join s in _context.Symptoms on a.SymptomId equals s.SymptomId
                                where s.SymptomId == id
-                               select s;
+                               select p;
 
             return View(symptom);
         }
