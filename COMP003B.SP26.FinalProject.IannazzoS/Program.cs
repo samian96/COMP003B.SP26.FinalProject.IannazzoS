@@ -42,6 +42,8 @@ namespace COMP003B.SP26.FinalProject.IannazzoS
             app.UseAuthorization();
 
             app.MapStaticAssets();
+
+            app.UseMiddleware<COMP003B.SP26.FinalProject.IannazzoS.Middleware.RequestLoggingMiddleware>();
             app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}")
