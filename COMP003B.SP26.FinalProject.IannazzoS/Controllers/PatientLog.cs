@@ -8,6 +8,6 @@ namespace COMP003B.SP26.FinalProject.IannazzoS.Controllers
     [Route("api/[controller]")]
     public class PatientLog : Controller
     {
-
+        
     }
 }
