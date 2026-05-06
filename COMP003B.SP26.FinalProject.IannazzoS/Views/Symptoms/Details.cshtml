@@ -18,6 +18,17 @@
         </dd>
     </dl>
 </div>
+
+<!--Display symptoms for patients-->
+<div class="col-md-4">
+    <h4>Patients</h4>
+    <ul>
+        @foreach (Patient patient in ViewBag.Patients)
+        {
+            <li>@patient.Name</li>
+        }
+    </ul>
+</div>
 <div>
     <a asp-action="Edit" asp-route-id="@Model?.SymptomId">Edit</a> |
     <a asp-action="Index">Back to List</a>
