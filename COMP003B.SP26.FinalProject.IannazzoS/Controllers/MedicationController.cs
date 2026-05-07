@@ -2,15 +2,23 @@
 using COMP003B.SP26.FinalProject.IannazzoS.Models;
 namespace COMP003B.SP26.FinalProject.IannazzoS.Controllers
 {
+    [Route("event")]
     public class MedicationController : Controller
     {
-        public IActionResult Index()
+        [HttpGet("medication/{medication}")]
+        public IActionResult OrderForm(string medication)
         {
-            var medications = new List<Medication> {
-                new Medication { Id = 1, Name = "Aspirin", Count = 10, Description = "400mg Aspirin for mild pain relief.", PrescriptionDate = DateTime.Now, DoctorNote = "Take as needed for pain 3 times a day." }
+            return View();
+        }
 
-            };
-            return View(medications);
+        [HttpPost("medication/{medication}")]
+        public IActionResult OrderForm([FromForm] Medication medication)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(medication);
+            }
+            return RedirectToAction("Success", medication);
         }
     }
 }
