@@ -41,5 +41,18 @@ namespace COMP003B.SP26.FinalProject.IannazzoS.Controllers
             return NoContent();
 
         }
+
+        [HttpDelete("{id}")]
+        public IActionResult DeletePatient(int id)
+        {// finds the Id of patient
+            var patient = PatientInfo.Patients.FirstOrDefault(p => p.Id == id);
+
+            if (patient is null)
+                return NotFound();
+            // removes the patient from PatientInfo
+            PatientInfo.Patients.Remove(patient);
+
+            return NoContent();
+        }
     }
 }
