@@ -1,0 +1,12 @@
+﻿@model Summary
+@{
+    // template for the context page layout will be re-used for one more page
+    <div class="card mb-3">
+        <div class="card-body">
+            <h3 class="card-header">@Model.Article</h3>
+            <h4 class="card-title">@Model.Title</h4>
+            <p class="card-text">@Model.Description</p>
+            <a asp-action="Summary" asp-route-id="@Model.Id" class="btn btn-outline-primary">Read More</a>
+        </div>
+    </div>
+}
