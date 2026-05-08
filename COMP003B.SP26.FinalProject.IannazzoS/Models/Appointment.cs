@@ -13,6 +13,5 @@ namespace COMP003B.SP26.FinalProject.IannazzoS.Models
         // nullable nav properties
         public virtual Patient? Patient { get; set; }
         public virtual Symptom? Symptom { get; set; }
-        public virtual Medication? Medication { get; set; }
     }
 }
