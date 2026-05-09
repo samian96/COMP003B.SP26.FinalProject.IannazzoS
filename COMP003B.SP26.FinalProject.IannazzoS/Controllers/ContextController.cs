@@ -14,7 +14,11 @@ namespace COMP003B.SP26.FinalProject.IannazzoS.Controllers
             {
                 new Summary {Id = 1, Article = 1, Title = "Appointments", Description = "Check to see if you have an appointment scheduled, or schedule a new appointment for yourself"},
 
-                new Summary {Id = 2, Article = 2, Title = "Patients", Description = "Check to see if you already have a patient account or need to create a new patient account."}
+                new Summary {Id = 2, Article = 2, Title = "Patients", Description = "Check to see if you already have a patient account or need to create a new patient account."},
+
+                new Summary {Id = 2, Article = 3, Title = "Symptoms", Description = "Check to see what type of symptoms you are experiencing"},
+
+                new Summary {Id = 2, Article = 4, Title = "Contact Us", Description = "Contact us if you are looking for a virtual appoiintment over an in person one."}
             };
             return View(summary);
         }
