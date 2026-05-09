@@ -5,8 +5,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using COMP003B.SP26.FinalProject.IannazzoS.Data;
 using COMP003B.SP26.FinalProject.IannazzoS.Models;
+using COMP003B.SP26.FinalProject.IannazzoS.Data;
 
 namespace COMP003B.SP26.FinalProject.IannazzoS.Controllers
 {

@@ -1,8 +1,7 @@
-﻿using COMP003B.SP26.FinalProject.IannazzoS.Models;
-using Humanizer;
+﻿
+
+using COMP003B.SP26.FinalProject.IannazzoS.Models;
 using Microsoft.AspNetCore.Mvc;
-using System.Diagnostics.Tracing;
-using System.Reflection;
 namespace COMP003B.SP26.FinalProject.IannazzoS.Controllers
 {
     [Route("context")]
