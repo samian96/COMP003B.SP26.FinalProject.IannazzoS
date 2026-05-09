@@ -5,9 +5,10 @@
     Layout = "~/views/shared/_layout.cshtml";
 }
 
-<h2>Services</h2>
+<h2>Appointments</h2>
 @foreach (var context in Model)
 {
     <partial name="_ContextCard" model="context" />
 }
 
+@await Html.PartialAsync("_NavMenu")
