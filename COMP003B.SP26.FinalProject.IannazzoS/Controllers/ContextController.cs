@@ -19,8 +19,8 @@ namespace COMP003B.SP26.FinalProject.IannazzoS.Controllers
         }
         public IActionResult Summary(int id)
         {
-            var details = new Summary { Id = id, Title = $"Summary {id}", Description = "This is a test" };
-            return View(details);
+            var details = new Summary { Id = id, Title = $"Summary {id}",};
+            return RedirectToAction("Index", "Appointments");
         }
     }
 }
