@@ -7,7 +7,7 @@ namespace COMP003B.SP26.FinalProject.IannazzoS.Controllers
     [Route("context")]
     public class ContextController : Controller
     {
-        [Route("index")]
+        [HttpGet("index")]
         public IActionResult Index()
         {
             var summary = new List<Summary>
@@ -22,6 +22,7 @@ namespace COMP003B.SP26.FinalProject.IannazzoS.Controllers
             };
             return View(summary);
         }
+        [HttpGet("summary/{id}")]
         public IActionResult Summary(int id)
         {
             var details = new Summary { Id = id, Title = $"Summary {id}", Description = "This area should be filled with information on the article",  };

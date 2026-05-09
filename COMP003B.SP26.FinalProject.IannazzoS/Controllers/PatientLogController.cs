@@ -1,12 +1,12 @@
 ﻿using COMP003B.SP26.FinalProject.IannazzoS.Models.API;
-using COMP003B.SP26.FinalProject.IannazzoS.Data;
 using Microsoft.AspNetCore.Mvc;
+using COMP003B.SP26.FinalProject.IannazzoS.Data.ApiData;
 
 namespace COMP003B.SP26.FinalProject.IannazzoS.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class PatientLog : Controller
+    public class PatientLogController : Controller
     {// should get all patient information from data
         [HttpGet]
         public ActionResult<List<ApiPatient>> GetPatients()

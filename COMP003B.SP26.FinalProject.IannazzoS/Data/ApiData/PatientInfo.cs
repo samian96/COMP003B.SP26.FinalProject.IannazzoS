@@ -1,6 +1,6 @@
 ﻿using COMP003B.SP26.FinalProject.IannazzoS.Models.API;
 using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages.Manage;
-namespace COMP003B.SP26.FinalProject.IannazzoS.Data
+namespace COMP003B.SP26.FinalProject.IannazzoS.Data.ApiData
 {
     public static class PatientInfo
     {
